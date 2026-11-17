@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
+  <title>Claude Tokens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card mood-idle" id="card">
+    <header class="header">
+      <span class="brand">Claude</span>
+      <span class="status"><span class="status-dot"></span><span id="status-text">em pausa</span></span>
+    </header>
+
+    <section class="hero">
+      <div class="bot-wrap" id="bot-wrap" aria-hidden="true">
+        <canvas class="bot3d" id="bot3d"></canvas>
+        <div class="zzz3d"><span>z</span><span>z</span></div>
+        <svg class="bot" viewBox="0 0 120 120">
+          <g class="bot-body">
+            <line class="antenna-stem" x1="60" y1="18" x2="60" y2="32"/>
+            <circle class="antenna-ball" cx="60" cy="14" r="5"/>
+            <rect class="ear" x="14" y="52" width="8" height="20" rx="4"/>
+            <rect class="ear" x="98" y="52" width="8" height="20" rx="4"/>
+            <rect class="head" x="20" y="30" width="80" height="64" rx="22"/>
+            <rect class="face" x="30" y="40" width="60" height="42" rx="15"/>
+            <g class="eyes">
+              <rect class="eye" x="42" y="52" width="10" height="14" rx="5"/>
+              <rect class="eye" x="68" y="52" width="10" height="14" rx="5"/>
+            </g>
+            <path class="mouth" d="M52 72 Q60 78 68 72"/>
+            <circle class="cheek" cx="38" cy="72" r="4"/>
+            <circle class="cheek" cx="82" cy="72" r="4"/>
+            <path class="sweat" d="M96 34 q4 7 0 10 q-4 -3 0 -10z"/>
+          </g>
+          <ellipse class="shadow" cx="60" cy="110" rx="26" ry="4"/>
+          <g class="zzz">
+            <text x="92" y="28">z</text>
+            <text x="100" y="18">z</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="numbers">
+        <div class="total" id="session-pct">—</div>
+        <div class="total-label">sessão atual (5 h)</div>
+        <div class="meta" id="session-reset">&nbsp;</div>
+        <button class="signin" id="signin" hidden>Iniciar sessão no claude.ai</button>
+      </div>
+    </section>
+
+    <section class="limits">
+      <div class="limit">
+        <div class="budget-row"><span>Sessão (5 h)</span><span id="five-label">—</span></div>
+        <div class="bar"><div class="bar-fill" id="five-fill"></div></div>
+      </div>
+      <div class="limit">
+        <div class="budget-row"><span>Semana</span><span id="week-label">—</span></div>
+        <div class="bar"><div class="bar-fill" id="week-fill"></div></div>
+        <div class="limit-sub" id="week-reset">&nbsp;</div>
+      </div>
+    </section>
+
+    <section class="code">
+      <div class="code-head">
+        <span>Claude Code hoje</span>
+        <span class="code-total" id="code-total">0</span>
+      </div>
+      <div class="history-bars" id="history"></div>
+    </section>
+
+    <div class="notice" id="notice" hidden></div>
+  </main>
+  <script src="vendor/bot3d.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:;">
+  <title>Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" id="card">
+    <header class="header">
+      <div class="bot-wrap" id="bot-wrap" title="Olá!">
+        <canvas class="bot3d" id="bot3d"></canvas>
+      </div>
+      <div class="title">
+        <div class="day">Hoje</div>
+        <div class="date" id="date"></div>
+      </div>
+      <div class="ring" id="ring" title="Progresso do dia">
+        <svg viewBox="0 0 44 44">
+          <circle class="ring-track" cx="22" cy="22" r="18"/>
+          <circle class="ring-fill" id="ring-fill" cx="22" cy="22" r="18"/>
+        </svg>
+        <span class="ring-text" id="ring-text">0/0</span>
+      </div>
+    </header>
+
+    <form class="add" id="add-form" autocomplete="off">
+      <input id="add-input" type="text" maxlength="200" placeholder="Nova tarefa…  (!texto = importante)">
+      <button type="submit" class="add-btn" aria-label="Adicionar">
+        <svg viewBox="0 0 20 20"><path d="M10 4v12M4 10h12"/></svg>
+      </button>
+    </form>
+
+    <section class="lists" id="lists">
+      <ul class="list" id="pending"></ul>
+      <div class="empty" id="empty" hidden>
+        <div class="empty-title" id="empty-title">Dia livre</div>
+        <div class="empty-sub" id="empty-sub">Adiciona a primeira tarefa acima.</div>
+      </div>
+      <button class="done-toggle" id="done-toggle" hidden>
+        <svg viewBox="0 0 20 20"><path d="M7 5l5 5-5 5"/></svg>
+        <span id="done-label">Concluídas</span>
+      </button>
+      <ul class="list done-list" id="done" hidden></ul>
+    </section>
+
+    <div class="toast" id="toast" hidden>
+      <span id="toast-text">Tarefa apagada</span>
+      <button id="toast-undo">Anular</button>
+    </div>
+  </main>
+  <script src="vendor/bot3d.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

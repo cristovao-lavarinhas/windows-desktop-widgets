@@ -1,0 +1,17 @@
+{
+  "name": "todo-widget",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Widget de tarefas diárias para o ambiente de trabalho do Windows.",
+  "main": "src/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@desktop-widgets/desktop-kit": "1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0"
+  }
+}

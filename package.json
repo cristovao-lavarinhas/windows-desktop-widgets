@@ -1,0 +1,21 @@
+{
+  "name": "windows-desktop-widgets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Widgets animados para o ambiente de trabalho do Windows (estilo macOS), em Electron.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "widgets/*"
+  ],
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "npm run build -w @desktop-widgets/bot3d",
+    "start:todo": "npm start -w todo-widget",
+    "start:claude-usage": "npm start -w claude-token-widget",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

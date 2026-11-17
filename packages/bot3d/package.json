@@ -1,0 +1,14 @@
+{
+  "name": "@desktop-widgets/bot3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mascote 3D procedural (Three.js) partilhada pelos widgets.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "three": "^0.187.0"
+  }
+}

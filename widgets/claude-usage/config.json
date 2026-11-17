@@ -1,0 +1,7 @@
+{
+  "refreshSeconds": 10,
+  "planRefreshSeconds": 60,
+  "historyDays": 7,
+  "workingThresholdSeconds": 120,
+  "closeWithClaude": true
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@desktop-widgets/desktop-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Integração com o ambiente de trabalho do Windows: janela presa ao desktop e posição por configuração de monitores.",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "koffi": "^3.3.7"
+  }
+}
